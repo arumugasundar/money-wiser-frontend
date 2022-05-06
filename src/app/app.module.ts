@@ -17,6 +17,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import { MatButtonModule } from "@angular/material/button";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +39,9 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
