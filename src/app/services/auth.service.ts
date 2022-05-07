@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
+  public backendUrl = "https://money-wiser-backend.herokuapp.com";
+  // public backendUrl = "https://localhost:3000";
+
   constructor(
     private http: HttpClient,
     private _router:Router) {
@@ -23,11 +26,11 @@ export class AuthService {
 
   register(name: string,email: string,password: string){
     const record: any = { name: name, email: email, password: password};
-    return this.http.post<{message:string}>('http://localhost:3000/api/auth/register',record);
+    return this.http.post<{message:string}>(this.backendUrl + '/api/auth/register',record);
   }
 
   login(record: any){
-    return this.http.post<{message:string,token:string}>('http://localhost:3000/api/auth/login',record);
+    return this.http.post<{message:string,token:string}>(this.backendUrl + '/api/auth/login',record);
   }
 
   logoutUser(){
