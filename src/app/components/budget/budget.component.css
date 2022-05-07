@@ -1,0 +1,10 @@
+.mat-cell {
+  padding: 8px 8px 8px 0;
+}
+
+.mat-header-cell{
+  padding: 8px 8px 8px 0;
+  background-color:rgb(190, 3, 190);
+  color: #fff;
+  text-align: center;
+}

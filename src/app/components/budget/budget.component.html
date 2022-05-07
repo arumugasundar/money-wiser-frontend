@@ -1,1 +1,37 @@
-<p>budget works!</p>
+<div class="container-fluid container-xxl">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12 d-flex justify-content-center p-2">
+      <div style="width:100%;height: 500px;overflow: auto;">
+        <table mat-table class="text-center" [dataSource]="transactionDataSource" style="width:100%;height:50%;margin:auto;">
+          <ng-container matColumnDef="Date">
+            <th mat-header-cell *matHeaderCellDef> <strong>Date</strong> </th>
+            <td mat-cell *matCellDef="let element"><small>{{this.datePipe.transform(element.date, 'dd-MMM-yyyy')}}</small></td>
+          </ng-container>
+
+          <ng-container matColumnDef="Transaction">
+            <th mat-header-cell *matHeaderCellDef> <strong>Transaction</strong> </th>
+            <td mat-cell *matCellDef="let element"><small>{{element.description}}</small></td>
+          </ng-container>
+
+          <ng-container matColumnDef="Deposit">
+            <th mat-header-cell *matHeaderCellDef> <strong>Deposit</strong> </th>
+            <td mat-cell *matCellDef="let element"><small>{{element.deposit.$numberDecimal}}</small></td>
+          </ng-container>
+
+          <ng-container matColumnDef="Withdraw">
+            <th mat-header-cell *matHeaderCellDef> <strong>Withdraw</strong> </th>
+            <td mat-cell *matCellDef="let element"><small>{{element.withdraw.$numberDecimal}}</small></td>
+          </ng-container>
+
+          <ng-container matColumnDef="Balance">
+            <th mat-header-cell *matHeaderCellDef> <strong>Balance</strong> </th>
+            <td mat-cell *matCellDef="let element"><small>{{element.balance.$numberDecimal}}</small></td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="transactionColumns;sticky:true;"></tr>
+          <tr mat-row *matRowDef="let row; columns: transactionColumns;"></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
