@@ -1,27 +1,15 @@
-# MoneyWiserFrontend
+# MoneyWiser - Privacy Focused Finance Management App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+Money-Wiser helps in personal finance management based on the income and expenses of individual users with data visualizations-based charts and feedbacks to improve the budget planning. Users could also set reminders for their upcoming payments. They could create different categories for expenses and set spending margins for those. They can also export those finance-based information.
 
-## Development server
+Stack Used : MEAN Stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Status
+ - completed Login, Register, Token Auth Flow
+ - started with dashboard and budget pages with bank transaction dataset stored in mongoDB.
 
-## Code scaffolding
+Demo Video Link - https://drive.google.com/drive/folders/1gAOET1cw3Pvio0J6GRxbqJ9yhcTAvNpA?usp=sharing
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Application Url
+ - frontend -> https://money-wiser-frontend.herokuapp.com/
+ - backend -> https://money-wiser-backend.herokuapp.com/
