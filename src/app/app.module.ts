@@ -19,6 +19,14 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { MatButtonModule } from "@angular/material/button";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule } from "@angular/common/http";
+import { MatIconModule } from  '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatToolbarModule } from  '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -41,7 +49,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatIconModule,
+    MatInputModule,
+    MatSnackBarModule,
+    MatFormFieldModule,
+    MatToolbarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
